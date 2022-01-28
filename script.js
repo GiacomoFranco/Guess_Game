@@ -1,27 +1,39 @@
-var tittle = document.getElementById('tittle');
-var buttonV = document.getElementById('button');
-var inputN = document.getElementById('input');
-var textP = document.getElementById('text');
+const tittle = document.getElementById("tittle");
+const buttonV = document.getElementById("button");
+const inputN = document.getElementById("input");
+const textP = document.getElementById("text");
+const attempsV = document.getElementById("attemp");
 var count = 0;
+var randomNumber;
 
+buttonV.addEventListener("click", comenzarVerificar);
 
-if (count == 0) {
-    function comenzar(){
-    tittle.style.top = 0 +"px";
+function comenzarVerificar() {
+  if (count == 0) {
+    tittle.style.top = 0 + "px";
     buttonV.style.top = 0 + "px";
     inputN.style.borderBottom = "3px solid white";
     inputN.style.width = "350px";
-        setTimeout(() => {
-            buttonV.style.padding = "5px 50px 5px 50px";
-            buttonV.innerHTML = "verificar"
-            textP.style.opacity = 1;
-            textP.style.fontSize = "2em";
-        }, 1500);
-    
-    count ++;
-    console.log(count);
-}
-}
-console.log(count);
+    setTimeout(() => {
+      buttonV.style.padding = "5px 50px 5px 50px";
+      buttonV.innerHTML = "verificar";
+      textP.style.opacity = 1;
+      attempsV.style.opacity = 1;
+    }, 1500);
 
-buttonV.addEventListener("click", comenzar);
+    randomNumber = Math.floor(Math.random() * 100 + 1);
+
+    count++;
+    console.log(count);
+    console.log(randomNumber);
+  } else {
+    for (let index = 1; index < 11; index++) {
+        console.log(index);
+    }
+    if (inputN.value == randomNumber) {
+      alert("lo adivinaste!");
+    }
+  }
+}
+
+console.log(count);
