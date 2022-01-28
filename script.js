@@ -6,10 +6,16 @@ const attempsV = document.getElementById("attemp");
 var count = 0;
 var randomNumber;
 
-buttonV.addEventListener("click", comenzarVerificar);
+if (count == 0) {  
+    buttonV.addEventListener("click", comenzarVerificar);
+}
+
+function saludar(){
+    alert("hiiiii");
+}
 
 function comenzarVerificar() {
-  if (count == 0) {
+
     tittle.style.top = 0 + "px";
     buttonV.style.top = 0 + "px";
     inputN.style.borderBottom = "3px solid white";
@@ -26,14 +32,23 @@ function comenzarVerificar() {
     count++;
     console.log(count);
     console.log(randomNumber);
-  } else {
-    for (let index = 1; index < 11; index++) {
-        console.log(index);
-    }
-    if (inputN.value == randomNumber) {
-      alert("lo adivinaste!");
-    }
-  }
 }
 
-console.log(count);
+if (count > 0) {
+    buttonV.addEventListener("click", saludar);
+}
+
+  
+//   else {
+
+//     for (count = 1; count < 11; count++) {
+//         document.getElementById(`attemp-${count}`).style.background = "white";  
+//         count++;
+//     }
+//     if (inputN.value == randomNumber) {
+//       alert("lo adivinaste!");
+//     }
+//   }
+// }
+
+// console.log(count);
