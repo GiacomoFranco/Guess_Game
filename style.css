@@ -63,33 +63,28 @@ section{
     color: white;
     font-weight: bolder;
     white-space: nowrap;
+    top: 125px;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
 }
+
+.main__input--container{
+    height: 393px;
+}
+
+
 
 .main__input{
-    border-radius: 30px;
-    border:none;
-    outline: none;
-    padding: 8px 0 8px 20px;
-    
-    height: 40px;
-    width: 40%;
-    font-size: 18px;
-    color: var(--salmon);
-    caret-color: white;
-    margin-bottom: 23px;
-    text-align: center;
-}
-
-
-.main__input--2{
 
     border:none;
     outline: none;
-    padding: 0 0 20px 20px;
+    padding: 0 0 20px 0;
     height: 150px;
     background-color: transparent;
     border-bottom: 3px solid white;
-    width: 350px;
+    width: 0;
     caret-color: white;
     margin-bottom: 23px;
 
@@ -98,7 +93,10 @@ section{
     color: white;   
     font-weight: bold;
     
-
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-in-out;
 }
 
 
@@ -106,20 +104,27 @@ section{
     text-decoration: none;
     font-weight: bold;
     color: white;
-    padding: 5px 50px 5px 50px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px 60.5px 5px 60.5px;
     border: 3px white solid;
     border-radius: 50px;
 
+    position: relative;
+    top: -43px;
+
     font-size: 25px;
+
+    transition: .3s color ease-in-out, .3s background ease-in-out, 1s top  ease-in-out;
 }
 
 .main__button:hover{
     text-decoration: none;
     color: var(--salmon);
-    padding: 5px 50px 5px 50px;
+    padding: 5px 60.5px 5px 60.5px;
     background: white;
     border-radius: 50px;
-
+    cursor: pointer;
     font-size: 25px;
 }
 
@@ -129,9 +134,14 @@ color: white;
 font-weight: 500;
 width: 1500px;
 text-align: center;
-font-size:2em;
+font-size:1.5em;
 position: relative;
 top: 100px;
+opacity: 0;
+    
+transition-property: all;
+transition-duration: 0.5s;
+transition-timing-function: ease-in-out;
 }
 
 
@@ -219,4 +229,3 @@ top: 100px;
         display: none;
     }
 }
-
